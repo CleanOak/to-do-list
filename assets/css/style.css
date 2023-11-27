@@ -52,3 +52,7 @@ input {
     font-size: 18px;
     user-select: none;
   }
+
+  ul li:nth-child(odd){
+    background: #ddd;
+  }
