@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+body {
+    
+    min-width: 250px;
+}
+
 #container-todo {
    background-color: aquamarine;
     width: 300px;
@@ -33,7 +38,17 @@ input {
     float: left;
     text-align: center;
     font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
     border-radius: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    position: relative;
+    list-style-type: none;
+    font-size: 18px;
+    user-select: none;
   }
