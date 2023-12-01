@@ -15,9 +15,9 @@
 }
 
 #content {
-  width: 340px;
+  width: 315px;
   margin: auto;
-  margin-left: -40px;
+  margin-left: -15px;
 }
 
 .header {
@@ -48,18 +48,32 @@ input {
   }
 
 
+  li {
+    text-align: start;
+    position: relative;
+    padding-left: 0.4em;
+  }
 
-  ul li {
-    
+  ul {
     list-style-type: none;
     font-size: 18px;
     user-select: none;
-    
+    cursor: pointer; 
   }
 
+  /* grey colour on all odd number task*/
   ul li:nth-child(odd){
     background: #ddd;
   }
+
+  li::before {
+    position: absolute;
+    left: -1.5em;
+    font-family: "Font Awesome 5 free";
+    content: "\f111";
+
+  }
+
 
   /* style the close x button*/
 
@@ -80,9 +94,9 @@ input {
    }
 
    #content {
-     width: 940px;
+     width: 920px;
      margin: auto;
-     margin-left:460px;
+     margin-left:480px; 
    }
 
   
