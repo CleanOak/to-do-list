@@ -69,10 +69,23 @@ input {
   li::before {
     position: absolute;
     left: -1.5em;
-    font-family: "Font Awesome 5 free";
+    font: var(--fa-font-regular);
     content: "\f111";
 
   }
+
+ 
+  li.checked {
+    color: #555;
+    text-decoration: line-through;
+  }
+
+  li.checked::before {
+
+    font: var(--fa-font-solid);
+    content: "\f00c";
+  }
+
 
 
   /* style the close x button*/
