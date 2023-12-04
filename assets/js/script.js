@@ -2,9 +2,9 @@ const inputBox = document.getElementById("myInput");
 let itemsList = document.getElementById("content-list");
 
 
-function addTask(){
+function addTask() {
     //conditional statment to alert empty input box and add task
-    if (inputBox.value === ''){
+    if (inputBox.value === '') {
         alert("You must add a task!")
     } else {
         let li = document.createElement("li");
@@ -17,27 +17,27 @@ function addTask(){
         li.appendChild(span)
     }
     //empty input box after adding task
-    inputBox.value ='';
+    inputBox.value = '';
     saveData();
 }
 
-   //click on task items to cancel or delete
- itemsList.addEventListener("click", function(e){
-    if(e.target.tagName === "LI"){
+//click on task items to cancel or delete
+itemsList.addEventListener("click", function (e) {
+    if (e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData();
-    } else if(e.target.tagName === "SPAN"){
+    } else if (e.target.tagName === "SPAN") {
         e.target.parentElement.remove();
         saveData();
     }
 }, false);
 
 
-function saveData(){
+function saveData() {
     localStorage.setItem("data", itemsList.innerHTML);
 }
 
-function showTask(){
+function showTask() {
     itemsList.innerHTML = localStorage.getItem("data");
 }
 
