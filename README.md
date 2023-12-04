@@ -2,9 +2,9 @@
 
 (Developer: Morgan Asare)
 
-[Visit live website](https://cleanoak.github.io/rock-scissor-game/)
+[Visit live website](https://cleanoak.github.io/to-do-list/)
 
-![Mockup image](docs/amiresponsive-rock-paper.png)
+![Mockup image](assets/images/to-do.png)
 
 ## Table of Content
 
