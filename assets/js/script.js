@@ -18,7 +18,30 @@ function addTask(){
     }
     //empty input box after adding task
     inputBox.value ='';
+    saveData();
 }
+
+   //click on task items to cancel or delete
+ itemsList.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        saveData();
+    } else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        saveData();
+    }
+}, false);
+
+
+function saveData(){
+    localStorage.setItem("data", itemsList.innerHTML);
+}
+
+function showTask(){
+    itemsList.innerHTML = localStorage.getItem("data");
+}
+
+showTask();
 
 
 
