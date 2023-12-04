@@ -52,6 +52,7 @@ input {
     text-align: start;
     position: relative;
     padding-left: 0.4em;
+    padding-top: 0.5em;
   }
 
   ul {
@@ -64,6 +65,7 @@ input {
   /* grey colour on all odd number task*/
   ul li:nth-child(odd){
     background: #ddd;
+    height: 40px;
   }
 
   li::before {
@@ -86,15 +88,12 @@ input {
     content: "\f00c";
   }
 
-
-
-
   /* style the close x button*/
 
  ul li span {
   position: absolute;
   right: 0;
-  top: -8px;
+  top: 0.5px;
   width: 40px;
   height: 40px;
   font-size: 22px;
@@ -103,6 +102,9 @@ input {
   text-align: center;
  }
 
+ ul li span:hover {
+   background: #edeef0;
+ }
 
   @media screen and (min-width: 768px) {
 
