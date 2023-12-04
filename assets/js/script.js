@@ -1,9 +1,18 @@
-let itemInput = document.getElementById("myInput");
-let itemsList = document.getElementsByTagName("li");
-let close = document.getElementsByClassName("close");
-let inputValue = document.getElementById("myinput");
-let span = document.createElement("span"); 
-let txt = document.createTextNode("\u00D7");
+const inputBox = document.getElementById("myInput");
+let itemsList = document.getElementsByTagName("content");
+
+
+function addTask(){
+
+    if (inputBox.value === ''){
+        alert("You must add a task!")
+    } else {
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        itemsList.appendChild(li);
+    }
+}
+
 
 
 
